@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" /> 
+<title>Portal for Adaptive Teaching and Learning. Create trial account.</title>
+<script src="assets/md5.js" type="text/javascript"></script>
+<script type="text/javascript">
+<!--
+	if (top != self) 
+		top.location.href = self.location.href;
+-->
+</script>
+</head>
+<body>
+<center><img src="assets/KnowledgeTreeLogo2.gif" alt="Knowledge Tree Logo" align="middle" /></center>
+<br/>
+<form id="edit" name="edit" method="post" action="http://adapt2.sis.pitt.edu/cbum/remoteauth">
+	<table border="0" cellspacing="0" cellpadding="4" align="center" width="450px" style=" padding:5px; background-color:#D7E8FE; border:1px dotted #000099">
+    	<tr><td colspan="2" style="font-weight:bold; text-align:center;">Create trial account</td></tr>
+        <tr>
+    	  <td colspan="2" style="color:red; text-align:justify; font-size:14px">Trial account is merely for getting acquainted with Knowlegde Tree and educational tools that it aggregates. <br/>
+   	      If you are a student in a class where Knowledge Tree was announced to be used, please contact your insructor regarding your login/password and/or email <a href="http://www.adapt2.sis.pitt.edu/wiki">PAWS</a> team at paws at pitt dot edu.<br/>
+   	      &nbsp;</td>
+    	</tr>
+		<tr>
+			<td align="right">First&nbsp;name</td>
+			<td><input id="fname" name='fname' type='text' maxlength='50' size='21' value=''/><span style="color:red;">&nbsp;*</span></td>
+		</tr>
+		<tr>
+			<td align="right">Last&nbsp;name</td>
+			<td><input id="lname" name='lname' type='text' maxlength='50' size='21' value=''/><span style="color:red;">&nbsp;*</span></td>
+		</tr>
+		<tr>
+			<td align="right">Login</td>
+			<td><input id='login' name='usr' type='text' maxlength='15' size='21' value=''/><span style="color:red;">&nbsp;*</span></td>
+		</tr>
+		<tr>
+			<td align="right">Password</td>
+			<td><input id='pass' name='pwd' type='password' maxlength='15' size='21' value=''/><span style="color:red;">&nbsp;*</span></td>
+		</tr>
+		<tr>
+			<td align="right">Group</td>
+			<td>
+				<input name='grp' id='grp_fake' type='text' value='Courses Showcase' disabled="disabled"/>
+				<input name='grp' id='grp' type='hidden' value='world'/>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">Email</td>
+			<td><input name='email' type='text' maxlength='50' size='45' value=''/></td>
+	
+		</tr>
+		<tr>
+			<td align="right">Affiliation</td>
+			<td><input name='org' type='text' maxlength='100' size='45' value=''/></td>
+		</tr>
+		<tr>
+			<td align="right">City,&nbsp;Province</td>
+			<td><input name='city' type='text' maxlength='30' size='45' value=''/></td>
+	
+		</tr>
+		<tr>
+			<td align="right">Country</td>
+			<td><input type='text' name='country' maxlength='50' size='45' value=''/></td>
+		</tr>
+		<tr>
+			<td colspan="2" valign='top'>How did you hear about us?</td>
+        </tr>
+        <tr>
+			<td>&nbsp;</td><td><textarea id='how' name='how' cols='39' rows='5'></textarea></td>
+		</tr>
+		<tr><td>&nbsp;</td><td><span style="color:red;">*</span> - mandatory fields</td></tr>
+		<tr> 
+			<td align="right"><input type="reset" value="Reset" /></td>
+			<td align="right"><a href='javascript:mySubmit()'><input id="create_account" type="button" value="Create trial account" /></a></td>
+		</tr>
+		
+	</table>
+    <input id='action' name='action' type='hidden' value='registration' />
+    <input id='pass_md5' name='md5' type='hidden' value='' />
+    <input id='fwd' name='fwd' type='hidden' value='http://adapt2.sis.pitt.edu/kt/registration_result.jsp' />
+</form>
+<script type='text/javascript'>
+function mySubmit()
+{
+	var error_msg = 'Field(s):\n';
+	var error = false
+	
+	if( document.edit.fname.value.length == 0 )
+	{
+		error_msg += '  * First name\n';
+		error = true;
+	}
+	if( document.edit.lname.value.length == 0 )
+	{
+		error_msg += '  * Last name\n';
+		error = true;
+	}
+	if( document.edit.usr.value.length == 0 )
+	{
+		error_msg += '  * Login\n';
+		error = true;
+	}
+	if( document.edit.pwd.value.length == 0 )
+	{
+		error_msg += '  * Password\n';
+		error = true;
+	}
+	error_msg += 'should not be empty';
+	
+	if(error) alert(error_msg );
+	else
+	{
+		document.getElementById("pass_md5").value=hex_md5(document.getElementById("pass").value);
+		document.edit.submit();
+	}
+}
+</script>
+</body>
+</html>

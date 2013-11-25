@@ -1,0 +1,194 @@
+
+/* CSS Document */
+
+/*
+SCHEMAS
+- blue   - 2D5FB6 - dark blue
+- burg   - B62D2D - burgundy
+- violet - 5F2DB6 - violet
+- dkcyan - 2D5F5F - dark cyan, sea wave color
+- green  - E6E6E6 - green
+- grey   - 888888 - grey
+- brown  - B65F2D - brown
+
+*/
+
+/* All Tables*/
+.subheader
+{
+	padding:2px;
+	font-weight:bold;
+}
+
+
+/* Overall Table*/
+.burg_table,
+.blue_table,
+.dkcyan_table,
+.violet_table,
+.green_table,
+.grey_table,
+.brown_table
+{
+	background-color:white;
+	border-style:solid;
+	border-width:1px;
+}
+.burg_table
+{
+	border-color:#B62D2D;
+}
+.blue_table
+{
+	border-color:#2D5FB6;
+}
+.dkcyan_table
+{
+	border-color:#2D5F5F;
+}
+.violet_table
+{
+	border-color:#5F2DB6;
+}
+.green_table
+{
+	border-color:#5FB62D;
+}
+.grey_table
+{
+	border-color:#888888;
+}
+.brown_table
+{
+	border-color:#B65F2D;
+}
+
+/* Message*/
+.burg_table_message,
+.blue_table_message,
+.dkcyan_table_message,
+.violet_table_message,
+.green_table_message,
+.grey_table_message,
+.brown_table_message
+{
+	background-color:white;
+	padding:2px;
+}
+
+
+/* Table Caption*/
+.burg_table_caption,
+.blue_table_caption,
+.dkcyan_table_caption,
+.violet_table_caption,
+.green_table_caption,
+.grey_table_caption,
+.brown_table_caption
+{
+	color:white;
+	text-align:left;
+	font-weight:bold;
+	padding:2px;
+	border-style:solid;
+	border-width:1px;
+}
+.burg_table_caption
+{
+	background-color:#B62D2D;
+	border-color:#B62D2D;
+}
+.blue_table_caption
+{
+	background-color:#2D5FB6;
+	border-color:#2D5FB6;
+}
+.violet_table_caption
+{
+	background-color:#5F2DB6;
+	border-color:#5F2DB6;
+}
+.dkcyan_table_caption
+{
+	background-color:#2D5F5F;
+	border-color:#2D5F5F;
+}
+.green_table_caption
+{
+	background-color:#5FB62D;
+	border-color:#5FB62D;
+}
+.grey_table_caption
+{
+	background-color:#888888;
+	border-color:#888888;
+}
+.brown_table_caption
+{
+	background-color:#B65F2D;
+	border-color:#B65F2D;
+}
+
+
+
+/* Table Header*/
+.burg_table_header,
+.blue_table_header,
+.dkcyan_table_header,
+.violet_table_header,
+.green_table_header,
+.grey_table_header,
+.brown_table_header
+{
+	padding:2px 2px 0px 2px;
+	background-color:#D6D6D6;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+}
+.burg_table_header
+{
+	border-bottom-color:#B62D2D;
+}
+.blue_table_header
+{
+	border-bottom-color:#2D5FB6;
+}
+.violet_table_header
+{
+	border-bottom-color:#5F2DB6;
+}
+.dkcyan_table_header
+{
+	border-bottom-color:#2D5F5F;
+}
+.green_table_header
+{
+	border-bottom-color:#5FB62D;
+}
+.grey_table_header
+{
+	border-bottom-color:#888888;
+}
+.brown_table_header
+{
+	border-bottom-color:#B65F2D;
+}
+
+
+
+
+/* Table Footer*/
+.burg_table_footer,
+.blue_table_footer,
+.dkcyan_table_footer,
+.violet_table_footer,
+.green_table_footer,
+.grey_table_footer,
+.brown_table_footer
+{
+	background-color:#D6D6D6;
+	padding:2px;
+	border-top-style:solid;
+	border-top-width:1px;
+	border-top-color:#888888;
+}

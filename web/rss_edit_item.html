@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+
+<html> <!-- utf-8 -->
+<head>
+<link rel='stylesheet' href="assets/KnowledgeTree.css" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; no-cache; charset=utf-8">
+<title>Main Frame</title>
+<script type='text/javascript'>
+function dropdown(select)
+{
+/*	alert('name of select: ' + select.name + '\n'
+		+ 'selection.text: ' + select.options[select.selectedIndex].text + '\n'
+		+ 'selection.title: ' + select.options[select.selectedIndex].title + '\n'
+		+ 'selection.value: ' + select.options[select.selectedIndex].value + '\n'
+		+ 'selection.id: ' + select.options[select.selectedIndex].id );/**/
+	if(select.options[select.selectedIndex].id.length>0)
+	{
+		document.edit.fld_title.value =  select.options[select.selectedIndex].title;
+		document.edit.fld_url.value = select.options[select.selectedIndex].value;
+		document.edit.fld_uri.value = select.options[select.selectedIndex].id;
+	}/**/
+}
+</script>
+</head>
+<body>
+<form style='padding:5px 5px 5px 5px;' id='edit' name='edit' method='post' action='/kt/content/doEdit' target='_top'>
+<!-- ID field -->
+<input name='fld_id' type='hidden' value='1159'>
+<!-- Title field -->
+
+<div class='pt_main_subheader_editing_name'>Title</div>
+<div class='pt_main_subheader_editingue' title='The title of the resource'><input readonly name='fld_title' type='text' value="User Model State" size='70' maxlength='200'></div>
+<!-- URL field -->
+<div class='pt_main_subheader_editing_name'>URL</div>
+<div class='pt_main_subheader_editingue' title='The URL the resource is associated with'><input readonly name='fld_url' type='text' value="http://kt1.exp.sis.pitt.edu:8080/umvis/servlet/Dispatcher?a=1&url=http%3a%2f%2fkt1.exp.sis.pitt.edu%3a8080%2fcbum%2fReportManager%3ftyp%3dcon%26dir%3dout%26frm%3dxml%26app%3d16%26dom%3dtrinity_college_dublin%26lev%3dcomprehension" size='70' maxlength='255'></div>
+<!-- URI field -->
+<div class='pt_main_subheader_editing_name'>URI</div>
+<div class='pt_main_subheader_editingue' title='The URI of the resource'><input readonly name='fld_uri' type='text' value="http://kt1.exp.sis.pitt.edu:8080/umvis/servlet/Dispatcher?a=1&url=http%3a%2f%2fkt1.exp.sis.pitt.edu%3a8080%2fcbum%2fReportManager%3ftyp%3dcon%26dir%3dout%26frm%3dxml%26app%3d16%26dom%3dtrinity_college_dublin%26lev%3dcomprehension" size='70' maxlength='255'></div>
+<!-- List field -->
+<div class='pt_main_subheader_editing_name'>Resource List</div>
+<div class='pt_main_subheader_editingue' title='The list of available resources'>
+	<select name="fld_list" id="fld_list" onChange="dropdown(this);">
+		<option id="" value="--noselection--">--select an item from list--</option>
+		<option id="http://rdf/print.c" title="print.c" value="http://print.c">print.c</option>
+		<option id="http://rdf/format.c" title="format.c" selected value="http://format.c">&bull;&nbsp;format.c</option>
+		<option id="http://rdf/time2date.c" title="time2date.c" value="http://time2date.c">time2date.c</option>
+	</select>&nbsp;bullet (&bull;) marks currently saved resource
+</div>
+<div>&nbsp;</div><div>
+<a class='pt_main_edit_button_ok' href='javascript:mySubmit()'>Submit</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<script type='text/javascript'>
+function mySubmit()
+{
+	var error_msg = 'Fields:\n';
+	var error = false
+	
+	if( document.edit.fld_title.value.length == 0 )
+	{
+		errror_msg += '  * Title';
+		error = true;
+	}
+	error_msg = '\n should not contail an empty string';
+	
+	if(error) alert(error_msg );
+	else
+	{
+		document.edit.submit();
+	}
+}
+</script>
+<a class='pt_main_edit_button_cancel' href='/kt/content/Show?id=1159' target='_top'>Cancel</a>
+
+</div>
+</form>
+
+</body>
+</html>

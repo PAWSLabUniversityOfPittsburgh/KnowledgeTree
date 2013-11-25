@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+</head>
+<script language="javascript">
+<!--
+	function flip(node, dir)
+	{
+		actor = node.parentNode.parentNode;
+		swap = null;
+		if(dir==-1) // swap up
+		{
+			swap = actor.previousSibling;
+		}
+		else if(dir==1) // swap down
+		{
+			swap = actor.nextSibling;
+		}
+		swap_id = swap.id;
+		if(swap_id!=null) // swap if somewhere to swap
+		{
+			i_actor_id = parseInt(actor.id.substring(3));
+			i_swap_id = parseInt(swap.id.substring(3));
+//			alert('actor:' + i_actor_id + ' swap:' + i_swap_id);
+			actor_in = actor.childNodes[0];
+			swap_in = swap.childNodes[0];
+//			alert('actorIN:' + actor_in.id + ' swapIN:' + swap_in.id);
+			actor_in = actor.childNodes[0];
+			swap_in = swap.childNodes[0];
+			
+			actor_in_html = actor_in.innerHTML;
+			actor_in.innerHTML = swap_in.innerHTML;
+			swap_in.innerHTML = actor_in_html;
+			
+			actor_in.childNodes[0].value = i_actor_id;
+			swap_in.childNodes[0].value = i_swap_id;
+			document.getElementById('weight_order_changed').value = 1;
+		}
+	}
+-->
+</script>
+<body>
+<form action="nada" method="post" name="edit" target="_top">
+<h2>List of Documents</h2>
+<div>
+	<input name="weight_order_changed" id="weight_order_changed" value="0" type="hidden">
+	<div id="pos1"><div style="display:inline;"><input name="doc221" value="1" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        </select>
+		&nbsp;&nbsp;Document 1</div>
+	</div><div id="pos2"><div style="display:inline;"><input name="doc222" value="2" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 2</div>
+	</div><div id="pos3"><div style="display:inline;"><input name="doc223" value="3" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 3</div>
+	</div><div id="pos4"><div style="display:inline;"><input name="doc224" value="4" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 4</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div><div id="pos5"><div style="display:inline;"><input name="doc225" value="5" type="hidden">
+		<a href="#" title="Move Up" onClick="flip(this, -1);">&nbsp;&uarr;&nbsp;Up</a>&nbsp;<a href="#" title="Move Down" onClick="flip(this, 1);">&nbsp;&darr;&nbsp;Down</a>&nbsp;Weight:&nbsp;
+		<select name="doc1weight" style="width:50px;" onChange="document.getElementById('weight_order_changed').value = 1;">
+        	<option value="0.1" >0.1</option>
+        	<option value="0.2">0.2</option>
+        	<option value="0.3">0.3</option>
+        	<option value="0.4">0.4</option>
+        	<option value="0.5">0.5</option>
+        	<option value="0.6">0.6</option>
+        	<option value="0.7">0.7</option>
+        	<option value="0.8">0.8</option>
+        	<option value="0.9">0.9</option>
+        	<option value="1.0" selected>1.0</option>
+        	<option value="2.0">2.0</option>
+        	<option value="3.0">3.0</option>
+        	<option value="4.0">4.0</option>
+        	<option value="5.0">5.0</option>
+        	<option value="6.0">6.0</option>
+        	<option value="7.0">7.0</option>
+        	<option value="8.0">8.0</option>
+        	<option value="9.0">9.0</option>
+        	<option value="10.0">10.0</option>
+        	        </select>
+		&nbsp;&nbsp;Document 5</div>
+	</div>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+<script language='javascript' src='prototype.js'></script>
+<script language='javascript' type='text/javascript'>
+function starOn(n_stars)
+{
+	to_zero = $A(document.getElementsByName('star'));
+	to_zero.each(
+		function(node){node.src='star_off.gif';}
+	);
+	var i=0;
+	for(i=0; i<n_stars; i++)
+		$('s'+(i+1)).src ='star_on.gif';
+}
+</script>
+</head>
+<body>
+
+<script language='JavaScript' type='text/javascript' src="wz_tooltip.js"></script>
+<form>
+<table name="menu" width="100%" border="0" cellpadding="2" cellspacing="0" style="padding-left:2px;padding-top:1px;border-bottom:1px solid #3366CC;">
+	<tr>
+		<td><a href="#"><img title='Folders' style="vertical-align:text-bottom;" src="folders.gif" width='16' height='16' border='0' onMouseOver="src='folders_hover.gif';" onMouseOut="src='folders.gif';"/></a></td>
+		<td>&nbsp;&nbsp;</td>
+		<td><a href="#"><img title='Up one folder' style="vertical-align:text-bottom;" src="updir.gif" width='16' height='16' border='0' onMouseOver="src='updir_hover.gif';" onMouseOut="src='updir.gif';"/></a></td>
+		<td>&nbsp;&nbsp;</td>
+		<td><a href="#"><img title='Add' style="vertical-align:text-bottom;" src="add.gif" width='16' height='16' border='0' onMouseOver="src='add_hover.gif';" onMouseOut="src='add.gif';"/></a></td>
+		<td><a href="#"><img title='Delete' style="vertical-align:text-bottom;" src="delete.gif" width='16' height='16' border='0' onMouseOver="src='delete_hover.gif';" onMouseOut="src='delete.gif';"/></a></td>
+		<td><a href="#"><img title='Edit' style="vertical-align:text-bottom;" src="edit.gif" width='16' height='16' border='0' onMouseOver="src='edit_hover.gif';" onMouseOut="src='edit.gif';"/></a></td>
+		<td><a href="#"><img title='Comments' style="vertical-align:text-bottom;" src="icons/comments.gif" width='16' height='16' border='0' 
+			onClick="TagToTip('textToolTip453830572',FIX,[(window.screen.availWidth-400)/2-200,(window.screen.availHeight-300)/2-150],PADDING,5,DELAY,100,BGCOLOR,'#E8EEF7',BORDERCOLOR,'#3366CC',FOLLOWMOUSE,false,BORDERSTYLE,'dotted',WIDTH,400,HEIGHT,300,TEXTALIGN,'justify',EXCLUSIVE,true);" /></a></td>
+		
+		
+		<td><a href="#"><img title='Comments' style="vertical-align:text-bottom;" src="icons/comments.gif" width='16' height='16' border='0' 
+			onClick="if($('saved').innerHTML.length>0){ $('yourtxt').innerHTML=$('saved').innerHTML;$('youredittxt').innerHTML=$('saved').innerHTML;} TagToTip('textToolTip453830572xx', CLOSEBTN, true, TITLE, 'Notes', CLOSEBTNTEXT, 'close', CLOSEBTNCOLORS, ['#3366CC', '#E8EEF7', '#E8EEF7', '#3366CC'], STICKY, true, HEIGHT, 300, PADDING,0,DELAY,100,BGCOLOR,'#E8EEF7',BORDERCOLOR,'#3366CC',FOLLOWMOUSE,false,BORDERSTYLE,'dotted',WIDTH,400,TEXTALIGN,'justify',EXCLUSIVE,true); $('yournote').style.display='block';" /></a></td>
+
+	
+		<td><a href="#"><img title='Comments' style="vertical-align:text-bottom;" src="icons/comments.gif" width='16' height='16' border='0' 
+			onClick="if($('saved').innerHTML.length>0){ $('yourtxt').innerHTML=$('saved').innerHTML;$('youredittxt').innerHTML=$('saved').innerHTML;} TagToTip('textToolTip453830572xxyy', CLOSEBTN, true, TITLE, 'Notes', CLOSEBTNTEXT, 'close', CLOSEBTNCOLORS, ['#3366CC', '#E8EEF7', '#E8EEF7', '#3366CC'], STICKY, true, HEIGHT, 300, PADDING,0,DELAY,100,BGCOLOR,'#E8EEF7',BORDERCOLOR,'#3366CC',FOLLOWMOUSE,false,BORDERSTYLE,'dotted',WIDTH,400,TEXTALIGN,'justify',EXCLUSIVE,true); $('yournote').style.display='block';" /></a></td>
+
+		<td width="100%">&nbsp;</td> <!--  -->
+		<td><input type="text" size="20" maxlength="50" style="margin:0px; padding:0px;"/></td>
+		<td><a href="#"><img title='Search' style="vertical-align:text-bottom;" src="search.gif" width='16' height='16' border='0' onMouseOver="src='search_hover.gif';" onMouseOut="src='search.gif';"/></a></td>
+		<td>&emsp;</td>
+		<td><a href="#" class="session_control">Help</a></td>
+		<td>|</td>
+		<td><a href="#" class="session_control">Reload</a></td>
+		<td>|</td>
+		<td><a href="#" class="session_control">Logout</a>&nbsp;</td>
+	</tr>
+</table>
+</form>
+
+<div id="textToolTip453830572" style="display:block; width:400px;">
+<form>
+<div><strong>Rating:</strong>&nbsp;</div>
+<input type="text" id="rating-value-old" value="0"/>
+</br>
+<div><strong>Note:</strong>&nbsp;<input type="radio" name="privacy" value="shared" checked/>shared, <input type="radio" name="privacy" value="private"/>private</div>
+<textarea name="note" rows="10" style="width:400px;"></textarea>
+<div align="right"><input type="submit" value="Submit" onClick="UnTip();" />&nbsp;&nbsp;<input type="reset" value="Cancel" onClick="UnTip();"  /></div>
+</form>
+</div>
+
+<p/>
+<script language="javascript" type="text/javascript">
+function flipComment(el)
+{
+	var nm = el.id;
+	if($(nm+'txt').style.display=='none')
+	{//open
+		$(nm+'txt').style.display='block';
+		$(nm+'icn').src='minus.gif';
+	}
+	else
+	{//close
+		$(nm+'txt').style.display='none';
+		$(nm+'icn').src='plus.gif';
+	}
+	
+}
+</script>
+
+
+
+<div id="textToolTip453830572xx" style="display:block; padding:2px; margin:0px;">
+	<!--
+	<div id="comment-menu" style="display:block; background-color:#3366CC; color:#E8EEF7;font-weight:bold;text-align:right; padding:2px;"><a href="javascript:void(0);" onClick="UnTip();">close</a></div>
+	-->
+	<div id="yournote" style="padding-bottom:10px;">
+		<div>
+			<div><strong style="background-color:#97ACD4;"> Your Note </strong> (October, 23, 2008) <img id="yourrate" src="3_5star.gif" width="60" height="12"/>&nbsp;<a href="javascript:void(0);" onClick="$('yournote').style.display='none';$('youreditnote').style.display='block';">Edit</a></div>
+			<div id='yourtxt' name="comment" >While the page is loading, the Tooltip Library hides automatically</div>
+		</div>
+	</div>
+	
+	<div id="youreditnote" style="display:none; padding-bottom:10px; padding-left:2px;">
+		<form>
+		<div><strong>Rating:</strong>&nbsp;<input type="radio" name="anonymity" value="signed" checked/>signed, <input type="radio" name="anonymity" value="private"/>private</div>
+		<div style="vertical-align:text-top;">
+			<a href="javascript:;"><img title="remove rating" border="0" id="s0" onMouseOver="starOn(0);" onMouseOut="starOn($('rating-value').value);"  onClick="$('rating-value').value=0;starOn($('rating-value').value);"src="ban.gif" width="16" height="16"/></a>
+			<a href="javascript:;"><img title="1/5 star" border="0" id="s1" name="star" src="star_off.gif" width="16" height="16" onMouseOver="starOn(1);" onMouseOut="starOn($('rating-value').value);" onClick="$('rating-value').value=1;starOn($('rating-value').value);"/></a>
+			<a href="javascript:;"><img title="2/5 stars" border="0" id="s2" name="star" onMouseOver="starOn(2);" onMouseOut="starOn($('rating-value').value);"  onClick="$('rating-value').value=2;starOn($('rating-value').value);" src="star_off.gif" width="16" height="16"/></a>
+			<a href="javascript:;"><img title="3/5 stars" border="0" id="s3" name="star" onMouseOver="starOn(3);" onMouseOut="starOn($('rating-value').value);"  onClick="$('rating-value').value=3;starOn($('rating-value').value);" src="star_off.gif" width="16" height="16"/></a>
+			<a href="javascript:;"><img title="4/5 stars" border="0" id="s4" name="star" onMouseOver="starOn(4);" onMouseOut="starOn($('rating-value').value);"  onClick="$('rating-value').value=4;starOn($('rating-value').value);" src="star_off.gif" width="16" height="16"/></a>
+			<a href="javascript:;"><img title="5/5 stars" border="0" id="s5" name="star" onMouseOver="starOn(5);" onMouseOut="starOn($('rating-value').value);"  onClick="$('rating-value').value=5;starOn($('rating-value').value);" src="star_off.gif" width="16" height="16"/></a></span>
+		</div>
+		<input type="text" id="rating-value" value="3"/>
+		<input type="text" id="rating-changed" value="0"/>
+		<br/>
+		<div><strong>Note:</strong>&nbsp;<input type="radio" name="privacy" value="shared" checked/>shared, <input type="radio" name="hidden" value="hidden"/>private</div>
+		<textarea id="youredittxt" rows="10" cols="40"></textarea>
+		<div><input type="button" value="Submit" onClick="$('saved').innerHTML=$('youredittxt').value;$('yourtxt').innerHTML=$('youredittxt').value;$('yournote').style.display='block';$('youreditnote').style.display='none';" />&nbsp;&nbsp;<input type="reset" value="Cancel" onClick="$('yournote').style.display='block';$('youreditnote').style.display='none';" /></div>
+		</form>
+	</div>
+	
+	<div style="display:block; padding-bottom:10px; padding-left:2px;">
+		<div>
+			<div><a id='c3' href="javascript:void(0);" onClick="flipComment(this);"><img id='c3icn' src="plus.gif" border="0" width="12" height="12" style="vertical-align:baseline;"/></a> <strong>peterb</strong> (October, 23, 2008) <img src="2_5star.gif" width="60" height="12"/></div>
+			<div id='c3txt' name="comment" style="display:none;">While the page is loading, the Tooltip Library hides automatically HTML elements to be converted to tooltips (e.g. the <span> element in the example above). To disable this auto-hide feature, set the variable TagsToTip in the global tooltip configuration in wz_tooltip.js to the value false (preset default: true). If desired, you must hide those HTML elements yourself, by setting their CSS 'display' property to 'none'. </div>
+		</div>
+	</div>
+	<div style="display:block; padding-bottom:10px; padding-left:2px;">
+		<div>
+			<div><a id='c2' href="javascript:void(0);" onClick="flipComment(this);"><img id='c2icn' src="plus.gif" border="0" width="12" height="12" style="vertical-align:baseline;"/></a> <strong>Sergey</strong> (October, 30, 2008) <img src="4_5star.gif" width="60" height="12"/></div>
+			<div id='c2txt' name="comment" style="display:none;">Doublequotes within the tooltip text must be written as HTML character entity (&quot;), since doublequotes serve already as delimiters for the onmouseover eventhandler, and cannot be nested. Apostrophes (singlequotes) must be masked with a preceding backslash, since apostophes serve already as delimiters for the tooltip text. As delimiters for HTML tag attributes inside the tooltip text, you can use either &quot; or \' . Example</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="textToolTip453830572xxyy" style="display:block; padding:2px; margin:0px;">
+	<!--
+	<div id="comment-menu" style="display:block; background-color:#3366CC; color:#E8EEF7;font-weight:bold;text-align:right; padding:2px;"><a href="javascript:void(0);" onClick="UnTip();">close</a></div>
+	-->
+	<div><strong>me</strong> (October, 23, 2008) <a href="javascript:void(0);" onClick="$('yournote').style.display='none';$('youreditnote').style.display='block';">Edit</a></div>
+	<div id="yournote" style="padding-bottom:10px;">While the page is loading, the Tooltip Library hides automatically</div>
+	
+	<div id="youreditnote" style="display:none; padding-bottom:10px; padding-left:2px;">
+		<form>
+		<div><input type="radio" name="privacy" value="shared" checked/>shared, <input type="radio" name="hidden" value="hidden"/>private</div>
+		<textarea id="youredittxt" rows="10" cols="40"></textarea>
+		<div><input type="button" value="Submit" onClick="$('saved').innerHTML=$('youredittxt').value;$('yourtxt').innerHTML=$('youredittxt').value;$('yournote').style.display='block';$('youreditnote').style.display='none';" />&nbsp;&nbsp;<input type="reset" value="Cancel" onClick="$('yournote').style.display='block';$('youreditnote').style.display='none';" /></div>
+		<input type="hidden" name="" value="" />
+		</form>
+	</div>
+	
+	<div style="display:block; padding-bottom:10px; padding-left:2px;">
+		<div><a id='c3' href="javascript:void(0);" onClick="flipComment(this);"><img id='c3icn' src="plus.gif" border="0" width="12" height="12" style="vertical-align:baseline;"/></a> <strong>peterb</strong> (October, 23, 2008)</div>
+		<div id='c3txt' name="comment" style="display:none;">While the page is loading, the Tooltip Library hides automatically HTML elements to be converted to tooltips (e.g. the <span> element in the example above). To disable this auto-hide feature, set the variable TagsToTip in the global tooltip configuration in wz_tooltip.js to the value false (preset default: true). If desired, you must hide those HTML elements yourself, by setting their CSS 'display' property to 'none'. </div>
+	</div>
+	<div style="display:block; padding-bottom:10px; padding-left:2px;">
+		<div><a id='c2' href="javascript:void(0);" onClick="flipComment(this);"><img id='c2icn' src="plus.gif" border="0" width="12" height="12" style="vertical-align:baseline;"/></a> <strong>Sergey</strong> (October, 30, 2008)</div>
+		<div id='c2txt' name="comment" style="display:none;">Doublequotes within the tooltip text must be written as HTML character entity (&quot;), since doublequotes serve already as delimiters for the onmouseover eventhandler, and cannot be nested. Apostrophes (singlequotes) must be masked with a preceding backslash, since apostophes serve already as delimiters for the tooltip text. As delimiters for HTML tag attributes inside the tooltip text, you can use either &quot; or \' . Example</div>
+	</div>
+</div>
+
+
+
+<div id="saved" style="display:none;"></div>
+
+<img src="icons/notes_annot_0.gif" /> <img src="icons/notes_more.gif" /><br/>
+<img src="icons/notes_annot_1.gif" /> <img src="icons/notes_more.gif" /><br/>
+<img src="icons/notes_annot_2.gif" /> <img src="icons/notes_more.gif" /><br/>
+<img src="icons/notes_annot_3.gif" /> <img src="icons/notes_more.gif" /><br/>
+
+<img src="icons/notes_annot_self_0.gif" /><img src="icons/note_new.gif" /> <img src="icons/notes_more.gif" /><img src="icons/note_new.gif" /><br/>
+<img src="icons/notes_annot_self_1.gif" /><img src="icons/note_new.gif" /> <img src="icons/notes_more.gif" /><br/>
+<img src="icons/notes_annot_self_2.gif" /><img src="icons/note_new.gif" /> <img src="icons/notes_more.gif" /><br/>
+<img src="icons/notes_annot_self_3.gif" /><img src="icons/note_new.gif" /> <img src="icons/notes_more.gif" /><br/>
+
+</body>
+</html>

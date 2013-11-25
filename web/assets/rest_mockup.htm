@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01//EN' 'http://www.w3.org/TR/html4/strict.dtd'> 
+<html>
+<head>
+<title>Knowledge Tree - User Info</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<link rel='StyleSheet' href='rest.css' type='text/css' /> 
+<script type='text/javascript' src='rest.js'></script>
+
+</head>
+
+<body onload='opener.init("");'>
+
+
+<h2>User Rest</h2>
+
+<table cellpadding='2px' cellspacing='0px' class='dkcyan_table'>
+	<caption class='dkcyan_table_caption'>Users</caption>
+	<tr>
+		<td class='dkcyan_table_header'><a href='#'><img src='home.gif' title='Home' alt='Home' border='0'></a></td>
+		<td class='dkcyan_table_header'align='right'><a href='#'><img src='rdf.gif' title='RDF' alt='RDF' border='0'></a></td>
+  	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a>&nbsp;<img src='edit_enable.gif' align='absbottom' /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a>&nbsp;<img src='delete_enable.gif' align='bottom' /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td class='dkcyan_table_footer'>&nbsp;</td>
+		<td class='dkcyan_table_footer'>3 users</td>
+	</tr>
+</table>
+<p/>
+<p/><table cellpadding='2px' cellspacing='0px' class='dkcyan_table'>
+	<caption class='dkcyan_table_caption'>Users</caption>
+	<tr>
+		<td class='dkcyan_table_header'><a href='#'><img src='home.gif' title='Home' alt='Home' border='0'></a></td>
+		<td class='dkcyan_table_header'align='right'><a href='#'><img src='rdf.gif' title='RDF' alt='RDF' border='0'></a></td>
+  	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a>&nbsp;<img src='edit_enable.gif' align='absbottom' /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a>&nbsp;<img src='delete_enable.gif' align='bottom' /></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td width='400'><a href='#'>Michael Yudelson&nbsp;(myudelson)</a></td>
+	</tr>
+	<tr>
+		<td class='dkcyan_table_footer'>&nbsp;</td>
+		<td class='dkcyan_table_footer'>3 users</td>
+	</tr>
+</table>
+<p/>
+<p/>
+
+
+<form method='post' action='/rest/user'>
+<input type="hidden" name="group_mnemonic" value="world" />
+<table cellpadding='2px' cellspacing='0px' class='blue_table'>
+	<caption class='blue_table_caption'>
+	World (all users) :: Adding new user 
+	</caption>
+	<tr>
+		<td colspan='2' class='subheader'>Add Existing (default)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td width='400'>
+			<select name='user_login'>
+				<option value=''>-- not selected --</option>
+				<option value='myudelson'>Yudelson, Michael (myudelson)</option>
+				<option value='sergey' class='dim_text'> &radic;&nbsp;Sosnovsky, Sergey (sergey)</option>
+				<option value='peterb'>Brusilovsky, Peter (peterb)</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+		<td width='400'>&dagger;&nbsp;Names in &radic; &curren; &bull;<span class='dim_text'>gray</span> denote current members of the group</td>
+	</tr>
+	<tr>
+		<td colspan='2' class='subheader' align="center">OR</td>
+	</tr>
+	<tr>
+		<td colspan='2' class='subheader'>Add New </td>
+	</tr>
+	<tr>
+		<td>Name</td>
+		<td width='400'><input name='name' type='text' maxlength='60' size='45' value='Yudelson, Michael'/></td>
+	</tr>
+	<tr>
+		<td>Login</td>
+		<td width='400'><input name='login' type='text' maxlength='15' size='21' value='myudelson'/></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td><input name='email' type='text' maxlength='50' size='45' value='mvy3@pitt.edu'/></td>
+	</tr>
+	<tr>
+		<td>Organization</td>
+		<td><input name='organzation' type='text' maxlength='100' size='45' value='University of Pittsburgh'/></td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td><input name='city' type='text' maxlength='30' size='45' value='Pittsburgh'/></td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td><input type='text' maxlength='50' size='45' value='USA'/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><textarea name='how' cols='44' rows='5'>PAWS Member</textarea></td>
+	</tr>
+	<tr>
+		<td class='blue_table_footer'><input type='submit' value='Submit'/></td>
+		<td class='blue_table_footer' align='right'><a href='http://www.pitt.edu'><input type='button' value='Cancel'/></a></td>
+	</tr>
+</table>
+</form>
+<p />
+<p />
+
+
+
+<form method='post' action='/rest/user'>
+<input type="hidden" name="" value="" />
+<table cellpadding='2px' cellspacing='0px' class='blue_table'>
+	<caption class='blue_table_caption'>Edit user information</caption>
+	<tr>
+		<td>Name</td>
+		<td width='400px'><input name='name' type='text' maxlength='60' size='45' value='Yudelson, Michael'/></td>
+	</tr>
+	<tr>
+		<td>Login</td>
+		<td width='400px'><input name='login' type='text' maxlength='15' size='21' value='myudelson'/>&nbsp;<font color='#FF0000'>*</font></td>
+	</tr>
+	<tr>
+		<td>Email</td>
+		<td><input name='email' type='text' maxlength='50' size='45' value='mvy3@pitt.edu'/></td>
+	</tr>
+	<tr>
+		<td>Organization</td>
+		<td><input name='organzation' type='text' maxlength='100' size='45' value='University of Pittsburgh'/></td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td><input name='city' type='text' maxlength='30' size='45' value='Pittsburgh'/></td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td><input type='text' maxlength='50' size='45' value='USA'/></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><textarea name='how' cols='44' rows='5'>PAWS Member</textarea></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><font color='#FF0000'>*&nbsp;changing user login might have un-anticipated side effects</font></td>
+	</tr>
+	<tr>
+	  <td class='blue_table_footer'><input type='submit' value='Submit'/></td>
+		<td class='blue_table_footer' align='right'><a href='http://www.pitt.edu'><input type='button' value='Cancel'/></a></td>
+	</tr>
+</table><input type='image' src='remove.gif' />
+</form>
+
+<p />
+<p />
+<table cellpadding='2px' cellspacing='0px' class='violet_table'>
+	<caption class='violet_table_caption'>
+	Administrators
+	</caption>
+	<tr>
+		<td class='violet_table_header'><a href='#'><img src='view_enabled.gif' title='View' alt='View' border='0'></a></td>
+		<td class='violet_table_header'align='right'><a href='#'><img src='edit2_enable.gif' title='Edit' alt='Edit' border='0'></a>&nbsp;&nbsp;<a href='#'><img src='home.gif' title='Home' alt='Home' border='0'></a></td>
+  	</tr>
+	<tr>
+		<td>Login</td>
+		<td width='400'>admin</td>
+	</tr>
+	<tr>
+		<td>Member count </td>
+		<td>3</td>
+	</tr>
+	<tr>
+	  <td></td>
+	  <td></td>
+  	</tr>
+	<tr>
+	  <td valign='top' class='violet_table_footer'>Member Of</td>
+	  <td class='violet_table_footer'>
+	  	<div name='openerControl'>Groups</div>
+	  	<div name='opener'>
+			<div><img src='dir_empty.gif'/><a href='#'>world</a>  <img src='remove.gif' align='bottom' /></div>
+			<div><img src='dir_empty.gif'/><a href='#'>admins</a>  <img src='remove.gif' align='bottom' /></div>
+		</div>
+	  </td>
+  	</tr>
+</table>
+<p/>
+<p/>
+<table cellpadding='0px' cellspacing='0px' class="green_table">
+	<tr>
+		<td class='green_table_caption'>Message</td>
+	</tr>
+	<tr>
+		<td class='green_table_message'>You've been Bamboozelled</td>
+	</tr>
+</table>
+<p/>
+<table cellpadding='0px' cellspacing='0px' class="burg_table">
+	<tr>
+		<td class='burg_table_caption'>Error</td>
+	</tr>
+	<tr>
+		<td class='burg_table_message'>The user specified does not exist</td>
+	</tr>
+</table>
+</body>
+</html>

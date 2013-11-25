@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context debug="1" reloadable="true">
+	<Realm className="org.apache.catalina.realm.DataSourceRealm"
+		dataSourceName="jdbc/portal"
+		localDataSource="true"
+		digest="md5"
+		roleNameCol="Role"
+		userCredCol="Pass"
+		userNameCol="Login"
+		userRoleTable="seq_role"
+		userTable="ent_user"/>
+
+	<Resource name="jdbc/portal"
+		auth="Container"
+		type="javax.sql.DataSource" 
+		username="student" 
+		password="student"
+		driverClassName="com.mysql.jdbc.Driver" 
+		url="jdbc:mysql://localhost:3306/portal_test2?autoReconnect=true"
+		maxActive="100" 
+		maxIdle="50"
+		maxWait="5000"
+		removeAbandoned="true" 
+		logAbandoned="true" />
+		
+	<Resource name="jdbc/um"
+		auth="Container"
+		type="javax.sql.DataSource" 
+		username="student" 
+		password="student"
+		driverClassName="com.mysql.jdbc.Driver" 
+		url="jdbc:mysql://localhost:3306/um2?autoReconnect=true"
+		maxActive="100" 
+		maxIdle="50"
+		maxWait="5000"
+		removeAbandoned="true" 
+		logAbandoned="true" />
+		
+</Context>

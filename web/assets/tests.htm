@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'
+'http://www.w3.org/TR/html4/loose.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<title>Untitled Document</title>
+
+<script type='text/javascript'>
+<!--
+function spaizGetElementById(id)
+{
+	if (document.getElementById(id))
+	{
+		return document.getElementById(id);
+	}
+	else if (document.all[id])
+	{
+		return document.all[id];
+	}
+	else if (document.layers && document.layers[id])
+	{
+		return (document.layers[id]);
+	}
+	else
+	{
+		return false;
+	}
+}
+function toggle_visibility(id, flag)
+{
+	if (spaizGetElementById(id))
+	{
+		spaizGetElementById(id).style.visibility = (flag) ? 'visible' : 'hidden';
+	}
+}
+//-->
+</script>
+
+
+</head>
+
+<body>
+<div id="wait" style="position:absolute; left:40%; top:50%; visibility:visible; background-color: #e7f3fd; border: #6699cc 1px solid; padding: 5px"> 
+  <font color="#000099"><b><font face="Arial, Helvetica, sans-serif">Loading 
+  ...</font></b></font><br>
+  <img src="wait.gif" alt="Loading page" width="150" height="13"> 
+  <br>
+  <font color="#000099" face="Arial, Helvetica, sans-serif" size="2">Please 
+  wait</font><font color="#000099"> </font></div>
+<script type='text/javascript'>
+<!--
+toggle_visibility('wait', 1);
+//-->
+</script>  
+
+
+<a href='#' title='Up one level'><div style='vertical-align:middle;'><img src='folder_up.gif' border='0' />&nbsp;...</div></a>
+<a href='#' title='This is a mockup folder.'><div style='vertical-align:middle;'><img src='folder_big.gif' border='0' />&nbsp;This is a mockup folder. This is a mockup folder. This is a mockup folder. This is a mockup folder. This is a mockup folder. This is a mockup folder. This is a mockup folder.</div></a>
+<img src="a2TeAL_full.gif" />
+</body>
+
+<script type='text/javascript'>
+<!--
+toggle_visibility('wait', 0);
+//-->
+</script>	
+</html>

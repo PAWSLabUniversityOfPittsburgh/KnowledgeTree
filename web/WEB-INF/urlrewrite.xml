@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+
+<!--
+http://localhost:8080/portal_client
+    Configuration file for UrlRewriteFilter
+    http://tuckey.org/urlrewrite/
+-->
+<urlrewrite>
+	
+	<!-- Default login -->
+    <rule>
+        <note>Login should be a default page</note>
+		<condition type="method">GET</condition>
+        <from>/$</from>
+        <to type="forward">/content/Show$</to>
+    </rule>
+
+	<!-- RDF.Nodes -->
+    <rule>
+        <note>Map GET requests for accessing RDF nodes info via node id</note>
+		<condition type="method">GET</condition>
+        <from>/rest/ktree([0-9]+)$</from>
+        <to type="forward">/rest/ktree?node_id=$1&amp;_format=rdf</to>
+    </rule>
+
+	<!-- RDF.Nodes FOR PERSEUS embeds -->
+    <rule>
+        <note>Map GET requests for accessing RDF nodes info via node id</note>
+		<condition type="method">GET</condition>
+        <from>/rest/ktree([0-9]+)\?_embed=(.*)$</from>
+        <to type="forward">/rest/ktree?node_id=$1&amp;_format=rdf&amp;_embed=$2</to>
+    </rule>
+
+     <!--
+
+    INSTALLATION
+
+        in your web.xml add...
+
+        <filter>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+            <init-param>
+                <param-name>logLevel</param-name>
+                <param-value>WARN</param-value>
+            </init-param>
+        </filter>
+        <filter-mapping>
+            <filter-name>UrlRewriteFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+
+     EXAMPLES
+
+     Redirect one url
+        <rule>
+            <from>/some/old/page.html</from>
+            <to type="redirect">/very/new/page.html</to>
+        </rule>
+
+    Redirect a directory
+        <rule>
+            <from>/some/olddir/(.*)</from>
+            <to type="redirect">/very/newdir/$1</to>
+        </rule>
+
+    Clean a url
+        <rule>
+            <from>/products/([0-9]+)</from>
+            <to>/products/index.jsp?product_id=$1</to>
+        </rule>
+    eg, /products/1234 will be passed on to /products/index.jsp?product_id=1234 without the user noticing.
+
+    Browser detection
+        <rule>
+            <condition name="user-agent">Mozilla/[1-4]</condition>
+            <from>/some/page.html</from>
+            <to>/some/page-for-old-browsers.html</to>
+        </rule>
+    eg, will pass the request for /some/page.html on to /some/page-for-old-browsers.html only for older
+    browsers whose user agent srtings match Mozilla/1, Mozilla/2, Mozilla/3 or Mozilla/4.
+
+    -->
+
+</urlrewrite>
+

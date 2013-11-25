@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="A2TeAL.css" rel="stylesheet" type="text/css">
+</head>
+<script language="javascript">
+<!--
+	function flip_dir_icon(node)
+	{
+
+		node.childNodes[0].style.display = (node.childNodes[0].style.display == "none") ? "inline" : "none";
+		node.childNodes[1].style.display = (node.childNodes[1].style.display == "none") ? "inline" : "none";
+		node.parentNode.nextSibling.style.display = (node.parentNode.nextSibling.style.display == "none") ? "block" : "none";
+	}
+-->
+</script>
+<!--
+this.childNodes[0].src = (this.nextSibling.style.display == "none") ? "dir_minus.gif" : "dir_plus.gif" ;
+<A href="#" onClick='this.childNodes[0].style.display = (this.childNodes[0].style.display == "none") ? "compact" : "none"; this.childNodes[1].style.display = (this.childNodes[1].style.display == "none") ? "compact" : "none"; this.parentNode.nextSibling.style.display = (this.parentNode.nextSibling.style.display == "none") ? "block" : "none";'><IMG SRC='dir_minus.gif' border=0 style="display:compact"><IMG SRC='dir_plus.gif' border=0 style="display:none"></A> Text one
+-->
+<body>
+
+
+<div style="display:block"><IMG SRC='dir_empty.gif' border=0 style="display:inline"><A href="#" onClick='flip_dir_icon(this);' class='pt_menu_left_opener'><IMG SRC='dir_minus.gif' border=0 style="display:none"><IMG SRC='dir_plus.gif' border=0 style="display:inline"></A>Text one</div><div style="display:none">
+<div><IMG SRC='dir_empty.gif' border=0 style="display:inline">1. Write whatever you want, as much as you want and whenever you want, if the user does not like it, he can hide it easilly</div>
+<div><IMG SRC='dir_empty.gif' border=0 style="display:inline">2. Write whatever you want, as much as you want and whenever you want, if the user does not like it, he can hide it easilly</div>
+</div>
+
+<br/><!-- ===========================  -->
+
+<div style='display:block'>
+<div>
+<A href='#' onClick='flip_dir_icon(this);' class='pt_menu_left_opener'><IMG SRC='dir_minus.gif' border=0 style='display:none'><IMG SRC='dir_plus.gif' border=0 style='display:inline'></A>CoPE (Collaborative Paper Exchange)</div>
+	<div style='display:none'><div style='display:block'><IMG SRC='dir_empty.gif' border=0 style='display:inline'/><div><IMG SRC='dir_empty.gif' border=0 style='display:inline'/>Dummy page 1</div></div><div style='display:block'><IMG SRC='dir_empty.gif' border=0 style='display:inline'/><div><IMG SRC='dir_empty.gif' border=0 style='display:inline'/>Dummy page 2</div></div><div style='display:block'><IMG SRC='dir_empty.gif' border=0 style='display:inline'/><div><IMG SRC='dir_empty.gif' border=0 style='display:inline'/>Dummy page 3</div></div>
+	</div>
+</div>
+
+
+
+
+<br/>
+
+<div>
+	<A href="#" onClick='this.childNodes[0].data = (this.childNodes[0].nodeValue == "-") ? "+" : "-"; this.parentNode.nextSibling.style.display = (this.parentNode.nextSibling.style.display == "none") ? "block" : "none";' style="text-decoration:none; cursor:hand; padding:">-</A>&nbsp;Text two
+</div><div style="display:block;">Write whatever you want, as much as you want and whenever you want, if the user does not like it, he can hide it easilly we can continue on and on forever, it might take up only as much space as the anchor for clicking on to open the text, because we can hide it all by default. The quick brown fox jumps over the lazy dog.
+</div>
+Text
+
+
+
+</body>
+</html>

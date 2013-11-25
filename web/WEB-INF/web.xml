@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app  id="kt" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>Knowledge Tree portal</display-name>
+	<description>Knowledge Tree portal</description>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<icon>
+		<small-icon>/assets/kt_favicon_16.png</small-icon>
+		<large-icon>/assets/kt_favicon_32.png</large-icon>
+	</icon>
+
+	<resource-ref>
+		<res-ref-name>jdbc/portal</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Unshareable</res-sharing-scope>
+	</resource-ref>
+	
+	<resource-ref>
+		<res-ref-name>jdbc/um</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+		<res-sharing-scope>Unshareable</res-sharing-scope>
+	</resource-ref>
+	
+	<env-entry>
+		<env-entry-name>ums</env-entry-name>
+		<env-entry-type>java.lang.String</env-entry-type>
+<!-- 		<env-entry-value>http://kt1.exp.sis.pitt.edu:8080/cbum/um</env-entry-value> -->
+		<env-entry-value>http://adapt2.sis.pitt.edu/cbum/um</env-entry-value>
+	</env-entry>
+
+	<!-- SERVLETS -->
+	<servlet>
+		<servlet-name>doAuthenticate</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.doAuthenticate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doAuthenticate</servlet-name>
+		<url-pattern>/content/doAuthenticate</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>doGroup</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.doGroup</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doGroup</servlet-name>
+		<url-pattern>/content/doGroup</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Show</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.Show</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Show</servlet-name>
+		<url-pattern>/content/ShowOld</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>doEdit</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.doEdit</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doEdit</servlet-name>
+		<url-pattern>/content/doEdit</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>doAdd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.doAdd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doAdd</servlet-name>
+		<url-pattern>/content/doAdd</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>doDelete</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.doDelete</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>doDelete</servlet-name>
+		<url-pattern>/content/doDelete</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AjaxRobot</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.AjaxRobot</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AjaxRobot</servlet-name>
+		<url-pattern>/ajax_robot</url-pattern>
+	</servlet-mapping>
+
+	<!-- JSP Mapping -->
+	
+	<servlet>
+		<servlet-name>jspMain</servlet-name>
+		<jsp-file>/WEB-INF/main.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jspMain</servlet-name>
+		<url-pattern>/content/jspMain</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>jspShow</servlet-name>
+		<jsp-file>/WEB-INF/Show.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jspShow</servlet-name>
+		<url-pattern>/content/Show</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>jspTop</servlet-name>
+		<jsp-file>/WEB-INF/top.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jspTop</servlet-name>
+		<url-pattern>/content/jspTop</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>jspLeft</servlet-name>
+		<jsp-file>/WEB-INF/left.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jspLeft</servlet-name>
+		<url-pattern>/content/jspLeft</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>jspRight</servlet-name>
+		<jsp-file>/WEB-INF/right.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jspRight</servlet-name>
+		<url-pattern>/content/jspRight</url-pattern>
+	</servlet-mapping>
+
+	<!-- ICTG Parameters -->
+	<!-- Dummy session creator 
+	<servlet> 
+		<servlet-name>ictg_sesion_creator</servlet-name>
+		<jsp-file>/WEB-INF/ictg_session_creator.xml</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ictg_sesion_creator</servlet-name>
+		<url-pattern>/ictg/ictg_session_creator</url-pattern>
+	</servlet-mapping> -->
+	
+	<context-param>
+		<param-name>ictg_session_creator</param-name>
+<!-- 		<param-value>http://localhost:8080/kt/ictg/ictg_session_creator?server=adapt2&amp;request=scode</param-value> -->
+		<param-value>http://ictg.cosc.canterbury.ac.nz:8001?server=adapt2&amp;request=scode</param-value>
+	</context-param>
+	<context-param>
+		<param-name>secret_word</param-name>
+		<param-value>problemaidcatpgt</param-value>
+	</context-param>
+	<context-param>
+		<param-name>ictg_problem_server_suffix</param-name>
+		<param-value>&amp;server=adapt2&amp;request=problem</param-value>
+	</context-param>
+	
+	<!-- REST SETTINGS -->
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/rest/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/rdf/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>JenaTester</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.rest.JenaTester</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JenaTester</servlet-name>
+		<url-pattern>/JenaTester</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestNodeView</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.rest.RestNodeView</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestNodeView</servlet-name>
+		<url-pattern>/rest/ktree</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestNodeForerunnersIDList</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.rest.RestNodeForerunnersIDList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestNodeForerunnersIDList</servlet-name>
+		<url-pattern>/rest/forerun</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Note</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.note.Note</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Note</servlet-name>
+		<url-pattern>/notes</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>NoteBatch</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.note.NoteBatch</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>NoteBatch</servlet-name>
+		<url-pattern>/notebatch</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>NoteView</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.note.NoteView</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>NoteView</servlet-name>
+		<url-pattern>/noteview</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<description>
+		</description>
+		<servlet-name>EnsembleOAIPMHServlet</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.oai_pmh.EnsembleOAIPMHServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EnsembleOAIPMHServlet</servlet-name>
+		<url-pattern>/oai-pmh-ensemble.xml</url-pattern>
+	</servlet-mapping>
+
+	<!-- Sequrity Settings -->
+	
+	<session-config>
+		<session-timeout>180</session-timeout>
+	</session-config>
+	<security-role>
+		<description>Any user of the system</description>
+		<role-name>user</role-name>
+	</security-role>
+	
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Entire Application</web-resource-name>
+			<url-pattern>/content/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<realm-name>PTest-form</realm-name>
+		<form-login-config>
+			<form-login-page>/login.jsp</form-login-page>
+			<form-error-page>/relogin.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+		
+</web-app>

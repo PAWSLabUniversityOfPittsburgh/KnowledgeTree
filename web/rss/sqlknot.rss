@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns="http://purl.org/rss/1.0/"
+>
+	<channel rdf:about="http://adapt2.sis.pitt.edu/webex/feed?scope=is12&amp;format=rss1.0">
+		<title>SQL KnoT - SQL Knowledge Tester</title>
+		<link>http://adapt2.sis.pitt.edu/kt/rss/sqlknot.rss</link>
+		<description rdf:parseType='Literal'>A set of parameterized poblems in the domain of SQL</description>
+		<items>
+			<rdf:Seq>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=5'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=6'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=5'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=5'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=5'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=5'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=15&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=5'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=5'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=1'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=2'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=3'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=4'/>
+				<rdf:li rdf:resource='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=5'/>			</rdf:Seq>
+		</items>
+	</channel>
+<!--	<image rdf:about="http://adapt2.sis.pitt.edu/webex/assets/webex_rss_image.gif">
+
+		<url>http://adapt2.sis.pitt.edu/webex/assets/webex_rss_image.gif</url>
+		<title>WebEx:: C-code examples for IS0012</title>
+		<link>http://adapt2.sis.pitt.edu/webex/feed?scope=is12&amp;format=rss1.0</link>
+	</image>-->
+	
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=1'>
+		<title>SELECT-FROM question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=2'>
+		<title>SELECT-FROM question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=3'>
+		<title>SELECT-FROM question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=4'>
+		<title>SELECT-FROM question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=5'>
+		<title>SELECT-FROM question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=5</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=6'>
+		<title>SELECT-DISTINCT question6</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=9&amp;tid=6</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=1'>
+		<title>Arithmetic Expressions question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=2'>
+		<title>Arithmetic Expressions question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=3'>
+		<title>Arithmetic Expressions question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=4'>
+		<title>Arithmetic Expressions question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=5'>
+		<title>Arithmetic Expressions question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=10&amp;tid=5</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=1'>
+		<title>SELECT-FROM-WHERE question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=2'>
+		<title>SELECT-FROM-WHERE question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=3'>
+		<title>SELECT-FROM-WHERE question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=4'>
+		<title>SELECT-FROM-WHERE question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=5'>
+		<title>SELECT-FROM-WHERE question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=11&amp;tid=5</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=1'>
+		<title>Pattern Matching question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=2'>
+		<title>Pattern Matching question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=3'>
+		<title>Pattern Matching question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=4'>
+		<title>Pattern Matching question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=5'>
+		<title>Pattern Matching question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=12&amp;tid=5</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=1'>
+		<title>Multiple Table question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=2'>
+		<title>Multiple Table question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=3'>
+		<title>Multiple Table question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=4'>
+		<title>Multiple Table question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=5'>
+		<title>Multiple Table question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=13&amp;tid=5</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=1'>
+		<title>Order-By question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=2'>
+		<title>Order-By question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=3'>
+		<title>Order-By question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=4'>
+		<title>Order-By question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=14&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=15&amp;tid=1'>
+		<title>Set Operations question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=15&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=1'>
+		<title>Aggregate Functions question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=2'>
+		<title>Aggregate Functions question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=3'>
+		<title>Aggregate Functions question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=4'>
+		<title>Aggregate Functions question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=5'>
+		<title>Aggregate Functions question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=16&amp;tid=5</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=1'>
+		<title>Group-By &amp; Having question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=2'>
+		<title>Group-By &amp; Having question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=3'>
+		<title>Group-By &amp; Having question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=4'>
+		<title>Group-By &amp; Having question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=5'>
+		<title>Group-By &amp; Having question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=17&amp;tid=5</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=1'>
+		<title>Sub-Queries question1</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=1</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=2'>
+		<title>Sub-Queries question2</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=2</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=3'>
+		<title>Sub-Queries question3</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=3</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=4'>
+		<title>Sub-Queries question4</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=4</link>
+	</item>
+
+	<item rdf:about='http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=5'>
+		<title>Sub-Queries question5</title>
+		<link>http://kt1.exp.sis.pitt.edu:8080/sqlknot/QuestionGenerator?cid=18&amp;tid=5</link>
+	</item>
+
+</rdf:RDF>
