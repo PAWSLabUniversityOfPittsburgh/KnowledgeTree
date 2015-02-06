@@ -35,6 +35,20 @@
 	</env-entry>
 
 	<!-- SERVLETS -->
+		<!-- Addition settings -->
+	<servlet>
+		<servlet-name>setNewPwd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.addition.setNewPwd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>setNewPwd</servlet-name>
+		<url-pattern>/setNewPwd</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
 	<servlet>
 		<servlet-name>doAuthenticate</servlet-name>
 		<servlet-class>edu.pitt.sis.paws.kt2.doAuthenticate</servlet-class>
@@ -233,7 +247,6 @@
 		<servlet-name>NoteView</servlet-name>
 		<servlet-class>edu.pitt.sis.paws.kt2.note.NoteView</servlet-class>
 	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>NoteView</servlet-name>
 		<url-pattern>/noteview</url-pattern>

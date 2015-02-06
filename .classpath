@@ -18,5 +18,6 @@
 	<classpathentry kind="lib" path="web/WEB-INF/lib/urlrewrite-2.6.0.jar"/>
 	<classpathentry kind="lib" path="web/WEB-INF/lib/xercesImpl.jar"/>
 	<classpathentry kind="lib" path="web/WEB-INF/lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="/Users/zouhaoda/Desktop/2nd Semester/KnowledgeTree/KnowledgeTree/web/WEB-INF/lib/javax.mail-1.5.2.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

@@ -199,6 +199,7 @@ public class ResourceMap
 				User a_user = (user_macro == Right.USER_ALL ) ? null : users.findById(a_user_id);
 				
 				node_id_list.add(a_node_id);
+				
 				see_from_root = (!see_from_root && a_node_id==1)?true:see_from_root;
 
 				if(a_user==null && user_macro != Right.USER_ALL)
@@ -209,7 +210,7 @@ public class ResourceMap
 				right.setITag(a_node_id); // save node id in the integer tag
 				
 				rights.add(right);
-
+				
 				if(user_macro == Right.USER_ALL)
 					globally_accessible_rights.add(right);
 
@@ -217,7 +218,7 @@ public class ResourceMap
 				if(a_user != null) user.getRights().add(right);
 				
 			}// end of -- right's while
-			
+			System.out.println(node_id_list);
 			rs.close();
 			stmt.close();
 			rs = null;
@@ -285,13 +286,14 @@ public class ResourceMap
 			al_stmt.add(stmt);
 			System.out.println("... [KTree2] Starting. ItemTypes added: " + this.itemtype_list.size());
 			
-			
+			System.out.println("zouzouzou1");
 			// now select nodes from rooted tree
 			qry = "SELECT * FROM ent_node WHERE NodeID IN(" + cumulative_list + ")" +
 				((see_from_root)
 					?" OR NodeID IN(SELECT NodeID FROM rel_node_node nn JOIN ent_node n "+
 							"ON(nn.ChildNodeID=n.NodeID) WHERE nn.ParentNodeID=1)"
 					:"") + ";";
+			System.out.println(qry);
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(qry);
 			
@@ -415,8 +417,10 @@ public class ResourceMap
 			al_stmt.add(stmt);
 			
 			// set globally_defined_rights
+			System.out.println("zouzouzou12");
 			globally_defined_rights = root_node.getRights();
 			
+			System.out.println("zouzouzou2");
 			// select connections
 			qry = "SELECT * FROM rel_node_node WHERE ChildNodeID IN(" + cumulative_list + ")" +
 			((see_from_root)
@@ -529,7 +533,7 @@ public class ResourceMap
 		JspWriter out, HttpServletRequest request/*, boolean show_ratings*/)
 		throws IOException
 	{
-//System.out.println("ResourceMap.displayFolderView entering...");
+System.out.println("ResourceMap.displayFolderView entering...");
 		// get the user_id
 		HttpSession session = request.getSession();
 		int user_id = ((Integer)session.getAttribute(ClientDaemon.SESSION_USER_ID)).intValue();
