@@ -1,4 +1,4 @@
-package edu.pitt.sis.paws.kt2.addition;
+package edu.pitt.sis.paws.kt2.setNewPwd;
 
 import java.util.UUID;
 

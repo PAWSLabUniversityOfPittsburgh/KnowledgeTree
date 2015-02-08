@@ -44,7 +44,15 @@
 	      //请求成功后的回调函数 data为json格式
 	      data:{email: email},
 	      success:function(data){
-	         alert(data.result);
+	    	  //give back sent information
+	    	  if(data.emailIsInDB==false)
+	    		  alert("Your email is not in our system!");
+	    	  else{
+	    		  if(sentStatus==true)
+	    			  alert("Reset link has been sent to your email!");
+	    		  else
+	    			  alert("Email sent fail");
+	    	  }
 	     },
 	     //请求出错的处理
 	     error:function(){

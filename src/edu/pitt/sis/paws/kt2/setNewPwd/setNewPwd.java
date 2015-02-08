@@ -1,4 +1,4 @@
-package edu.pitt.sis.paws.kt2.addition;
+package edu.pitt.sis.paws.kt2.setNewPwd;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,6 +19,7 @@ import edu.pitt.sis.paws.core.utils.SQLManager;
 public class setNewPwd extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	boolean emailIsInDB=false;
+	boolean sentStatus=false;
 	private SQLManager sqlManager=new SQLManager("java:comp/env/jdbc/portal");
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -58,7 +59,10 @@ public class setNewPwd extends HttpServlet{
 							+handlePageString+"?email="+EmailString+"&uuid="+uuidString;
 					//System.out.println(urlSentString);
 					
-				}
+					//SENT EMAIl
+					MailSender mailSender=new MailSender(urlSentString, EmailString);
+					sentStatus=true;
+				} 
 				
 			}
 			
@@ -68,7 +72,7 @@ public class setNewPwd extends HttpServlet{
 		
 		
 		PrintWriter out = response.getWriter(); 
-		out.print("{\"result\":\"" + emailIsInDB+"\"}");
+		out.print("{\"emailIsInDB\":\"" + "emailIsInDB"+"\",\"sentStatus\":"+"\"sentStatus"+"\"}");
 		emailIsInDB=false;
 		out.flush();
 		out.close();
