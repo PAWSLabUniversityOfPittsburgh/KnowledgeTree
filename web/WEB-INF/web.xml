@@ -35,17 +35,24 @@
 	</env-entry>
 
 	<!-- SERVLETS -->
-		<!-- Addition settings -->
+		<!-- setNewPwd settings -->
 	<servlet>
-		<servlet-name>setNewPwd</servlet-name>
-		<servlet-class>edu.pitt.sis.paws.kt2.addition.setNewPwd</servlet-class>
+		<servlet-name>forgotPwd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.setNewPwd.forgotPwd</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>setNewPwd</servlet-name>
-		<url-pattern>/setNewPwd</url-pattern>
+		<servlet-name>forgotPwd</servlet-name>
+		<url-pattern>/forgotPwd</url-pattern>
 	</servlet-mapping>
 	
-	
+	<servlet>
+		<servlet-name>ResetPwd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.setNewPwd.ResetPwd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResetPwd</servlet-name>
+		<url-pattern>/ResetPwd</url-pattern>
+	</servlet-mapping>
 	
 	
 	

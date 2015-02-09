@@ -38,21 +38,20 @@
 	    var email=$("#emailid").val();
 	    $.ajax({
 	      type:"post",//请求方式
-	      url:"setNewPwd",//发送请求地址
+	      url:"forgotPwd",//发送请求地址
 	      timeout:30000,//超时时间：30秒
 	      dataType:"json",//设置返回数据的格式
 	      //请求成功后的回调函数 data为json格式
 	      data:{email: email},
-	      success:function(data){
+	      success:function(d){
 	    	  //give back sent information
-	    	  if(data.emailIsInDB==false)
-	    		  alert("Your email is not in our system!");
-	    	  else{
-	    		  if(sentStatus==true)
-	    			  alert("Reset link has been sent to your email!");
-	    		  else
-	    			  alert("Email sent fail");
-	    	  }
+	    	 console.log(d);
+	    	 if((d.emailIsInDB=="false")&&(d.sentStatus=="false"))
+	    		 alert("Your email is not in system.");
+	    	 if((d.emailIsInDB=="true")&&(d.sentStatus=="true"))
+	    		 alert("Reset link has been sent to your email.");
+	    	 if((d.emailIsInDB=="true")&&(d.sentStatus=="false"))
+	    		 alert("Reset link sent fail.");	 
 	     },
 	     //请求出错的处理
 	     error:function(){
@@ -65,6 +64,5 @@
 
 
 </script>
-</body>
 </body>
 </html>

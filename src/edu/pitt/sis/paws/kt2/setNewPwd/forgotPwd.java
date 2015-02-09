@@ -4,22 +4,18 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import edu.pitt.sis.paws.core.utils.SQLManager;
 
 
-public class setNewPwd extends HttpServlet{
+public class forgotPwd extends HttpServlet{
 	private static final long serialVersionUID = 1L;
-	boolean emailIsInDB=false;
-	boolean sentStatus=false;
+	
 	private SQLManager sqlManager=new SQLManager("java:comp/env/jdbc/portal");
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -30,6 +26,9 @@ public class setNewPwd extends HttpServlet{
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException{
+		boolean emailIsInDB=false;
+		boolean sentStatus=false;
+		
 		String EmailString=request.getParameter("email");
 		String urlSentString=new String();
 		System.out.println("Input email: "+EmailString);
@@ -43,14 +42,26 @@ public class setNewPwd extends HttpServlet{
 			while (rSet.next()) {
 				emailIsInDB=true;
 			}
-			
+
+
 			if (emailIsInDB==true) {
 				//Generate UUID
 				UUIDGenerator uuidGenerator=new UUIDGenerator();
 				String uuidString=uuidGenerator.getUUID();
-				String handlePageString="/dd";//This is the page to handle url
+				String handlePageString="/ResetPwd";//This is the page to handle url
 				//Save Email, UUID to DB
-				qryString="INSERT INTO email_uuid VALUES("+'"'+EmailString+'"'+", "+"'"+uuidString+"')";
+				//test if that email has already been in mail_uuid table
+				qryString="SELECT * FROM email_uuid WHERE email="+"'"+EmailString+"'";
+				//System.out.println(qryString);
+				rSet=stmtStatement.executeQuery(qryString);
+				if (rSet.next()) {
+					qryString="UPDATE email_uuid SET uuid="+"'"+uuidString+"'"+" WHERE email=\'"+EmailString+"'";
+					//System.out.println(qryString);
+				}else {
+					qryString="INSERT INTO email_uuid VALUES("+'"'+EmailString+'"'+", "+"'"+uuidString+"')";
+					//System.out.println(qryString);
+				}
+			
 				//System.out.println(qryString);
 				int influencedLine=stmtStatement.executeUpdate((qryString));
 				if(influencedLine>0){
@@ -72,7 +83,8 @@ public class setNewPwd extends HttpServlet{
 		
 		
 		PrintWriter out = response.getWriter(); 
-		out.print("{\"emailIsInDB\":\"" + "emailIsInDB"+"\",\"sentStatus\":"+"\"sentStatus"+"\"}");
+		System.out.println(emailIsInDB+", "+sentStatus);
+		out.print("{\"emailIsInDB\":\"" + emailIsInDB+"\",\"sentStatus\":"+"\""+sentStatus+"\"}");
 		emailIsInDB=false;
 		out.flush();
 		out.close();
