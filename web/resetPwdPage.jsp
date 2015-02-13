@@ -22,12 +22,12 @@
     	<tr><td colspan="2" style="font-weight:bold; text-align:center;">Reset Password</td></tr>
     	
         <tr>
-    	  <td colspan="2" style="color:red; text-align:justify; font-size:14px">Please set up new password for your account.</td>
+    	  <td id="information" colspan="2" style="color:red; text-align:justify; font-size:14px">Please set up new password for your account.</td>
     	</tr>
 
 		<tr>
 			<td align="right">Email Address</td>
-			<td><input type='text' maxlength='50' size='35' value='<%=emailString%>' readonly="readonly"/></td>
+			<td><input id="email"type='text' maxlength='50' size='35' value='<%=emailString%>' readonly="readonly"/></td>
 		</tr>
 		
 		<tr>
@@ -48,9 +48,48 @@
 	</form>
 </body>
 <script>
-	$(document).ready(function() {
-		
+$(document).ready(function() {
+	//check password
+	$('#newPassword1,#newPassword2').keyup(function(event) {
+		/* Act on the event */
+		var pwd1=$('#newPassword1').val();
+		var pwd2=$('#newPassword2').val();
+		//alert(pwd1+" "+pwd2);
+		if (pwd1!=pwd2) {
+			$('#resetbutton').attr('disabled', 'disabled');
+			$('#information').html('*Two password must be same!');
+		}
+		if(pwd1==pwd2){
+			$('#resetbutton').removeAttr('disabled');
+			$('#information').html('Please set up new password for your account.');
+		}
 	});
+	//ajax
+	$('form').submit(function(event){
+	    var password=$("#newPassword1").val();
+	    var email=$('#email').val();
+	    $.ajax({
+	      type:"post",//请求方式
+	      url:"SaveNewPwd",//发送请求地址
+	      timeout:30000,//超时时间：30秒
+	      dataType:"json",//设置返回数据的格式
+	      //请求成功后的回调函数 data为json格式
+	      data:{"password": password,"email":email},
+	      success:function(d){
+	    	  //give back sent information
+			 //alert(d.status);
+	    	  alert("Successfully change password, please login");
+	    	  window.location="index.jsp";
+	     },
+	     //请求出错的处理
+	     error:function(d){
+	         alert(d.status);
+	     }
+	  });
+		event.preventDefault();//IMPORTANT!!
+	});
+	
+});
 
 </script>
 </html>

@@ -54,7 +54,14 @@
 		<url-pattern>/ResetPwd</url-pattern>
 	</servlet-mapping>
 	
-	
+	<servlet>
+		<servlet-name>SaveNewPwd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.setNewPwd.SaveNewPwd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SaveNewPwd</servlet-name>
+		<url-pattern>/SaveNewPwd</url-pattern>
+	</servlet-mapping>	
 	
 	<servlet>
 		<servlet-name>doAuthenticate</servlet-name>

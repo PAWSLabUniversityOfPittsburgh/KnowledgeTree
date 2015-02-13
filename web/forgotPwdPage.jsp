@@ -18,7 +18,7 @@
     	<tr><td colspan="2" style="font-weight:bold; text-align:center;">Reset Password</td></tr>
     	
         <tr>
-    	  <td colspan="2" style="color:red; text-align:justify; font-size:14px">Please input your e-mail address. The there will be a link sent to your e-mail for you to reset your password.</td>
+    	  <td colspan="2" style="color:red; text-align:justify; font-size:14px">Please input your e-mail address. Then there will be a link sent to your e-mail for you to reset your password.</td>
     	</tr>
 
 		<tr>
