@@ -30,7 +30,10 @@ public class SaveNewPwd extends HttpServlet{
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//super.doPost(req, resp);
+		PrintWriter out = resp.getWriter();
 		
+		if(req.getParameter("isChangePwd").equals("no")){
+		//Handle request from set new password page
 		String newPassword=req.getParameter("password");
 		String emailString=req.getParameter("email");
 		String	md5Password=md5(newPassword);
@@ -51,8 +54,25 @@ public class SaveNewPwd extends HttpServlet{
 			e.printStackTrace();
 			outputJsonString=String.format("{\"status\":\"%s\"}", e);
 		}
-		PrintWriter out = resp.getWriter();
 		
+		}else {
+		//handle request from change password page(already login)
+			String newPassword=req.getParameter("password");
+			String userid=req.getParameter("userid");
+			String	md5Password=md5(newPassword);
+			System.out.println(newPassword+" userid: "+userid);
+			try {
+				Connection connection=sqlManager.getConnection();
+				Statement statement=connection.createStatement();
+				String qryString=String.format("UPDATE ent_user SET Pass='%s' WHERE UserID='%s'", md5Password,userid);
+				statement.execute(qryString);
+				System.out.println(qryString);
+				outputJsonString=String.format("{\"status\":\"%s\"}", "true");
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+
+		}
 		System.out.println(outputJsonString);
 		out.write(outputJsonString);
 		out.flush();

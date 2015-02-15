@@ -286,14 +286,13 @@ public class ResourceMap
 			al_stmt.add(stmt);
 			System.out.println("... [KTree2] Starting. ItemTypes added: " + this.itemtype_list.size());
 			
-			System.out.println("zouzouzou1");
 			// now select nodes from rooted tree
 			qry = "SELECT * FROM ent_node WHERE NodeID IN(" + cumulative_list + ")" +
 				((see_from_root)
 					?" OR NodeID IN(SELECT NodeID FROM rel_node_node nn JOIN ent_node n "+
 							"ON(nn.ChildNodeID=n.NodeID) WHERE nn.ParentNodeID=1)"
 					:"") + ";";
-			System.out.println(qry);
+			//System.out.println(qry);
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(qry);
 			
@@ -417,10 +416,10 @@ public class ResourceMap
 			al_stmt.add(stmt);
 			
 			// set globally_defined_rights
-			System.out.println("zouzouzou12");
+			
 			globally_defined_rights = root_node.getRights();
 			
-			System.out.println("zouzouzou2");
+			
 			// select connections
 			qry = "SELECT * FROM rel_node_node WHERE ChildNodeID IN(" + cumulative_list + ")" +
 			((see_from_root)

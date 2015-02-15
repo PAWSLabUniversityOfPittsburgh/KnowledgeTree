@@ -1,19 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"
-	language="java"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    language="java"
+	import="edu.pitt.sis.paws.kt2.*,edu.pitt.sis.paws.core.*"
+	errorPage=""%>
+<%
+	if(!ClientDaemon.isSessionInited(request.getSession(false)))
+	{
+		ClientDaemon.forwardToURL(request,response, "/content/doAuthenticate");
+		return;
+	}
+	
+	ClientDaemon cd = ClientDaemon.getInstance();
+	String user_name = (String)session.getAttribute(ClientDaemon.SESSION_USER_NAME);
+	int user_id = ((Integer)session.getAttribute(ClientDaemon.SESSION_USER_ID)).intValue();
+
 %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" /> 
+<title>Change Password</title>
 <script src="assets/jquery-2.1.3.min.js"></script>
-<title>Reset Password</title>
-
 </head>
-<%
-	String emailString=(String)request.getAttribute("email");
-%>
 <body>
 	<center><img src="assets/KnowledgeTreeLogo2.gif" alt="Knowledge Tree Logo" align="middle" /></center>
 <br/>
@@ -26,8 +34,8 @@
     	</tr>
 
 		<tr>
-			<td align="right">Email Address</td>
-			<td><input id="email"type='text' maxlength='50' size='35' value='<%=emailString%>' readonly="readonly"/></td>
+			<td align="right">Name</td>
+			<td><input id="email"type='text' maxlength='50' size='35' value='<%=user_name%>' readonly="readonly"/></td>
 		</tr>
 		
 		<tr>
@@ -67,14 +75,14 @@ $(document).ready(function() {
 	//ajax
 	$('form').submit(function(event){
 	    var password=$("#newPassword1").val();
-	    var email=$('#email').val();
+	    var userid=<%=user_id%>
 	    $.ajax({
 	      type:"post",//请求方式
 	      url:"SaveNewPwd",//发送请求地址
 	      timeout:30000,//超时时间：30秒
 	      dataType:"json",//设置返回数据的格式
 	      //请求成功后的回调函数 data为json格式
-	      data:{"password": password,"email":email,"isChangePwd":"no"},
+	      data:{"password": password,"userid":userid,"isChangePwd":"yes"},
 	      success:function(d){
 	    	  //give back sent information
 			 //alert(d.status);
