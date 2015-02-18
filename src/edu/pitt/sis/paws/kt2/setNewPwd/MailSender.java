@@ -42,7 +42,7 @@ public class MailSender {
 			Message message = new MimeMessage(session);
 			String contentString="<h3>Dear Knowledge-Tree user:<h3>"
 					+ "<p>Please click this link to reset your password:<p>"
-					+ "<a href=http://"+urlToSend+">"+urlToSend+"</a>"
+					+ "<a href=\""+urlToSend+"\">"+urlToSend+"</a>"
 							+ "<br/><br/><br/>"
 							+ "----------------------------------------------------------------<br/>"
 							+ "<h4>From <a href="+"\"http://adapt2.sis.pitt.edu/kt/content/Show\">Knowledge-Tree</a><br>"

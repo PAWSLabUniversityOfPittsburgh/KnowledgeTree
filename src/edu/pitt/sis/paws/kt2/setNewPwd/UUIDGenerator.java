@@ -6,7 +6,7 @@ public class UUIDGenerator {
     public UUIDGenerator() { 
     } 
     /** 
-     * 获得一个UUID 
+     * get a UUID 
      * @return String UUID 
      */ 
     public static String getUUID(){ 
@@ -15,9 +15,9 @@ public class UUIDGenerator {
         return s.substring(0,8)+s.substring(9,13)+s.substring(14,18)+s.substring(19,23)+s.substring(24); 
     } 
     /** 
-     * 获得指定数目的UUID 
-     * @param number int 需要获得的UUID数量 
-     * @return String[] UUID数组 
+     * get specific number of UUID
+     * @param number int UUID's number 
+     * @return String[] UUID array
      */ 
     public static String[] getUUID(int number){ 
         if(number < 1){ 

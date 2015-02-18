@@ -66,8 +66,10 @@ public class forgotPwd extends HttpServlet{
 				int influencedLine=stmtStatement.executeUpdate((qryString));
 				if(influencedLine>0){
 					//make Message sent to User Email
-					urlSentString=request.getServerName()+":"+request.getServerPort()+ request.getContextPath()
-							+handlePageString+"?email="+EmailString+"&uuid="+uuidString;
+//					urlSentString=request.getServerName()+":"+request.getServerPort()+ request.getContextPath()
+//							+handlePageString+"?email="+EmailString+"&uuid="+uuidString;
+					
+					urlSentString=getBaseUrl(request)+handlePageString+"?email="+EmailString+"&uuid="+uuidString;
 					//System.out.println(urlSentString);
 					
 					//SENT EMAIl
@@ -89,4 +91,15 @@ public class forgotPwd extends HttpServlet{
 		out.flush();
 		out.close();
 	}
+	
+	public String getBaseUrl(HttpServletRequest request) {
+	    if (( request.getServerPort() == 80 ) || ( request.getServerPort() == 443 )) {
+	        return request.getScheme() + "://" + request.getServerName() + 
+	                request.getContextPath();
+	    } else {
+	        return request.getScheme() + "://" + request.getServerName() + ":" + 
+	                request.getServerPort() + request.getContextPath();
+	    }
+	}
+	
 }
