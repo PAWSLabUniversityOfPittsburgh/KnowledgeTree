@@ -35,6 +35,34 @@
 	</env-entry>
 
 	<!-- SERVLETS -->
+		<!-- setNewPwd settings -->
+	<servlet>
+		<servlet-name>forgotPwd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.setNewPwd.forgotPwd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>forgotPwd</servlet-name>
+		<url-pattern>/forgotPwd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ResetPwd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.setNewPwd.ResetPwd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResetPwd</servlet-name>
+		<url-pattern>/ResetPwd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SaveNewPwd</servlet-name>
+		<servlet-class>edu.pitt.sis.paws.kt2.setNewPwd.SaveNewPwd</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SaveNewPwd</servlet-name>
+		<url-pattern>/SaveNewPwd</url-pattern>
+	</servlet-mapping>	
+	
 	<servlet>
 		<servlet-name>doAuthenticate</servlet-name>
 		<servlet-class>edu.pitt.sis.paws.kt2.doAuthenticate</servlet-class>
@@ -233,7 +261,6 @@
 		<servlet-name>NoteView</servlet-name>
 		<servlet-class>edu.pitt.sis.paws.kt2.note.NoteView</servlet-class>
 	</servlet>
-	
 	<servlet-mapping>
 		<servlet-name>NoteView</servlet-name>
 		<url-pattern>/noteview</url-pattern>

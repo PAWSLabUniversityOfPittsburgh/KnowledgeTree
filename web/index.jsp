@@ -36,9 +36,7 @@ Affiliation: University of Pittsburgh, School of Information Sciences
 	}
 %>
 <script type="text/javascript">
-<!--
 		document.location = '<%=request.getContextPath() + "/content/Show"%>';
--->
 </script>
 <body>
 <!--

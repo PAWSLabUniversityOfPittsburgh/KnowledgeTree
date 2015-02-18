@@ -98,8 +98,15 @@ public class doAuthenticate extends HttpServlet
 			qry = "SELECT uu.ParentUserID, u.Name FROM rel_user_user uu" +
 				" LEFT JOIN ent_user u ON(u.UserID=uu.ParentUserID) " +
 				"WHERE uu.ChildUserID = " + user_id;
+			
+			System.out.println("TESTING:"+qry);
+			
+			
 			stmt2 = conn.createStatement();
 			rs2 = stmt2.executeQuery(qry);
+			
+			System.out.println("TESTING:"+rs2);
+			
 			while(rs2.next())
 			{
 				int _id = rs2.getInt("ParentUserID");

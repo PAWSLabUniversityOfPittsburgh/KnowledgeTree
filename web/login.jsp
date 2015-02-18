@@ -77,7 +77,7 @@
 					<td><input id="j_password_main" name="j_password" type="password" value="" size="20" maxlength="20" /></td>
 				</tr>
 				<tr> 
-					<td>&nbsp;</td><td align="right"><input type="submit" value="Login" /></td>
+					<td align="left"><a target="_blank" href="<%=request.getContextPath()%>/forgotPwdPage.jsp">Forget?</a></td><td align="right"><input type="submit" value="Login" /></td>
 				</tr>
 			</table>
 			</form>

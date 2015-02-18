@@ -516,6 +516,10 @@ a.menu:link, a.menu:active, a.menu:visited
 		<td>|</td>
 		 -->
 		 
+		 <!-- Reset Password -->
+		 <td><a href="#">Change Password</a></td>
+		 <td>&nbsp;|&nbsp;</td>
+		 
 		 <!-- Reload -->
 		<td><a class='session_control' href='<%=request.getContextPath() + "/content/Show?" + ClientDaemon.REQUEST_NODE_ID + "=" + res_map.getRootNode().getId() + "&" + Show.SHOW_FLAG_RELOAD %>=1' target = "_top">Reload</a></td>
 		<td>&nbsp;|&nbsp;</td>

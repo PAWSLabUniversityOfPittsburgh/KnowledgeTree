@@ -605,6 +605,9 @@ function saveComment()
 	}
 }
 
+function changePwd(){
+	var newpwd=prompt("input your new pwd");
+}
 
 </script>
 <!-- 
@@ -722,8 +725,10 @@ a.menu:link, a.menu:active, a.menu:visited
 		<td><a href="#"><img title='Search' style="vertical-align:text-bottom;" src="<%=request.getContextPath()%>/assets/search.gif" width='16' height='16' border='0' onmouseover="src='<%=request.getContextPath()%>/assets/search_hover.gif';" onmouseout="src='<%=request.getContextPath()%>/assets/search.gif';"/></a></td>
 		-->
 		
-		<td>&emsp;</td>
-		
+		<!-- Reset Password -->
+		 <td><a href="<%=request.getContextPath()%>/changePwdPage.jsp" class="session_control">Change Password</a></td>
+		 <td>&nbsp;|&nbsp;</td>
+		 
 		 <!-- Reload -->
 		<td><a class='session_control' href='<%=request.getContextPath() + "/content/Show?" + ClientDaemon.REQUEST_NODE_ID + "=" + res_map.getRootNode().getId() + "&" + Show.SHOW_FLAG_RELOAD %>=1' target = "_top">Reload</a></td>
 		<td>&nbsp;|&nbsp;</td>
